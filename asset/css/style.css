@@ -256,6 +256,38 @@ button.owl-prev{
     z-index: 99;
     font-weight: 600;
 }
+.servicesicon{
+    position: relative;
+}
+.servicesicon::after{
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 107px;
+    height: 107px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    opacity: 0;
+    overflow: hidden;
+}
+.servicesicon1::after{
+    background: url('/asset/img/explosion.gif');
+    opacity: 1;
+}
+.servicesicon2::after{
+    background: url('/asset/img/fire.gif');
+    opacity: 1;
+}
+.servicesicon3::after{
+    background: url('/asset/img/water.gif');
+    opacity: 1;
+}
+.servicesicon4::after{
+    background: url('/asset/img/peralux.gif');
+    opacity: 1;
+}
 /* ==================Brathcrumb bottom css end=================== */
 section.brathcrumbbottom p {
     font-size: 14px;

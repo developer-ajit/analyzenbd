@@ -1,34 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Molengo&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,500;1,300;1,500&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* body{
     width: 100%;
     overflow-x: hidden;
 } */
-img{
+img {
     max-width: 100%;
     height: auto;
 }
-h1,h2,h3,h4,h5,h6,span,p,a{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a {
     font-family: 'Poppins', sans-serif;
 }
-a{
+
+a {
     display: inline-block;
     text-decoration: none;
 }
-span{
+
+span {
     display: inline-block;
 }
-.floadright{
+
+.floadright {
     float: right;
 }
-.floadleft{
+
+.floadleft {
     float: left;
 }
-.clearfix::after{
+
+.clearfix::after {
     content: '';
     display: block;
     clear: both;
@@ -39,37 +55,61 @@ span{
 .headercontent {
     padding: 0;
 }
+
 header {
-    z-index: 999;
+    z-index: 99;
     position: relative;
+    transition: all .5s ease-in-out;
 }
-.scrolactive{
+
+.scrolactive {
     background: #fff;
     color: #111;
     transition: all .5s ease-in-out;
-  
+
 }
+
 .navbar-dark .navbar-brand {
     color: #fff;
     padding: 0;
 }
-.headermenu{}
-.headermenu ul{
+
+.headermenu {}
+
+.headermenu ul {
     margin: 0;
     padding: 0;
 }
-.headermenu ul li{}
+
+.headermenu ul li {}
+
 .headermenu ul li a {
     color: #787272;
     font-weight: 500;
     padding: 21px 14px;
+    transition: all .5s ease-in-out;
 }
-.nevmenu{
+
+.nevmenu {
     color: rgb(0, 0, 0) !important;
 }
+
 /* ==================header css end=================== */
 /* ==================banner css start=================== */
-.bannersection{
+#loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannersection {
     background: url('/asset/img/analyzen-superheros-bg.jpg') center center no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -77,14 +117,17 @@ header {
     position: relative;
     height: 600px;
 }
+
 canvas#stars {
     opacity: .5;
     height: 100%;
     width: 100%;
 }
-.banner-content{
+
+.banner-content {
     color: #fff;
 }
+
 .bannerconsection {
     position: absolute;
     top: 50%;
@@ -92,23 +135,67 @@ canvas#stars {
     width: 100%;
     transform: translateY(-50%);
 }
+
 .banner-content h4 {
     font-size: 17px;
     color: #dddd;
 }
+
 .banner-content h1 {
     font-size: 55px;
     font-weight: 700;
 }
+
 .banner-content h3 {
     font-size: 20px;
     color: #ddd;
 }
+
 .banner-content p {
     font-size: 15px;
     font-weight: 400;
 }
+
 /* banner caoursel */
+
+.hi-slide {
+    position: relative;
+    width: 754px;
+    height: 104%;
+    margin: 38px auto 0;
+}
+
+
+.hi-slide>ul {
+    list-style: none;
+    position: relative;
+    width: 754px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.hi-slide>ul>li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 377px;
+    top: 146px;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 3px solid #fff;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.hi-slide>ul>li>img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
 
 /* ==================banner css end=================== */
 /* ==================gallery css start=================== */
@@ -116,6 +203,7 @@ canvas#stars {
     display: flex;
     flex-wrap: wrap;
 }
+
 .galleryitem {
     width: 33.3%;
     position: relative;
@@ -135,13 +223,16 @@ canvas#stars {
     visibility: hidden;
     transition: all .5s ease-in-out;
 }
-.galleryitem:hover .overlycontent{
+
+.galleryitem:hover .overlycontent {
     opacity: 1;
     visibility: visible;
 }
+
 section.gallerysection {
     overflow: hidden;
 }
+
 .gallerylink a {
     text-align: center;
     color: #fff;
@@ -149,15 +240,18 @@ section.gallerysection {
     font-size: 35px;
     margin-top: 54px;
 }
+
 .overlycontenttext {
     position: relative;
     top: 44px;
     left: 26px;
     color: #fff;
 }
+
 .seemorebtn {
     text-align: center;
 }
+
 .seemorebtn a {
     padding: 10px 45px;
     border: 1px solid #111;
@@ -165,101 +259,19 @@ section.gallerysection {
     font-weight: 500;
     margin-top: 20px;
 }
+
 /* ==================gallery css end=================== */
 /* ==================our service css start=================== */
 .ourservicestitile h2 {
     font-size: 48px;
     font-weight: 600;
 }
-.ourservicesitem{}
-.ourservicesitem img{}
-.ourservicesitem h3 {
-    color: #111;
-    margin-bottom: 26px;
-    font-size: 17px;
-    margin-top: 10px;
-    height: 28px;
-}
-.ourservicesitem p {
-    font-size: 14px;
-    color: #111;
-}
-h3.games {
-    color: #fbba06;
-}
-h3.web-dev {
-    color: #f93082;
-}
-h3.content-dev {
-    color: #66a1d3;
-}
-h3.strategy {
-    color: #ff572c;
-}
-section.oursection {
-    padding-bottom: 112px;
-}
-/* ==================our service css end=================== */
-/* ==================our service bottom css start=================== */
-.reviewsection{
-    overflow: hidden;
-    background: #f4f5f9;
-    padding: 40px 0;
-}
-.reviews{
-    text-align: center;
-}
-.reviews img {
-    width: 191px !important;
-    margin: auto;
-}
-.reviews h4 {
-    font-size: 17px;
-}
-.reviews h3 {
-    font-size: 15px;
-}
-button.owl-next span, button.owl-prev span {
-    font-size: 44px;
-}
-button.owl-next {
-    position: absolute;
-    right: 0;
-    top: 36%;
-}
-button.owl-prev{
-    position: absolute;
-    left: 0;
-    top: 36%;
-}
-/* ==================our service bottom css end=================== */
-/* ==================Brathcrumb css start=================== */
-.brathcramp{
-    padding: 120px 0;
-    background-repeat: repeat-x;
-    background-position: bottom right;
-    position: relative;
-    animation: bganimation 30s ease-in-out infinite;
-}
-.brathcramp::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(17, 17, 17, 0.538);
-   
-}
-.brathcramp h2{
-    position: relative;
-    z-index: 99;
-    font-weight: 600;
-}
-.servicesicon{
+
+.serviceimg {
     position: relative;
 }
-.servicesicon::after{
+
+.serviceimg::after {
     position: absolute;
     left: 0;
     right: 0;
@@ -272,65 +284,526 @@ button.owl-prev{
     opacity: 0;
     overflow: hidden;
 }
-.servicesicon1::after{
+
+.ourservicesitem:hover .serviceimg1::after {
     background: url('/asset/img/explosion.gif');
     opacity: 1;
 }
-.servicesicon2::after{
+
+.ourservicesitem:hover .serviceimg4::after {
     background: url('/asset/img/fire.gif');
     opacity: 1;
 }
-.servicesicon3::after{
+
+.ourservicesitem:hover .serviceimg4::after {
     background: url('/asset/img/water.gif');
     opacity: 1;
 }
-.servicesicon4::after{
+
+.ourservicesitem:hover .serviceimg2::after {
     background: url('/asset/img/peralux.gif');
     opacity: 1;
 }
+
+.ourservicesitem:hover .serviceimg5::after {
+    background: url('/asset/img/explosion.gif');
+    opacity: 1;
+}
+
+.ourservicesitem:hover .serviceimg8::after {
+    background: url('/asset/img/fire.gif');
+    opacity: 1;
+}
+
+.ourservicesitem:hover .serviceimg6::after {
+    background: url('/asset/img/water.gif');
+    opacity: 1;
+}
+
+.ourservicesitem:hover .serviceimg7::after {
+    background: url('/asset/img/peralux.gif');
+    opacity: 1;
+}
+
+.ourservicesitem img {}
+
+.ourservicesitem h3 {
+    color: #111;
+    margin-bottom: 26px;
+    font-size: 17px;
+    margin-top: 10px;
+    height: 28px;
+}
+
+.ourservicesitem p {
+    font-size: 14px;
+    color: #111;
+}
+
+h3.games {
+    color: #fbba06;
+}
+
+h3.web-dev {
+    color: #f93082;
+}
+
+h3.content-dev {
+    color: #66a1d3;
+}
+
+h3.strategy {
+    color: #ff572c;
+}
+
+section.oursection {
+    padding-bottom: 112px;
+}
+
+/* ==================our service css end=================== */
+/* ==================our service bottom css start=================== */
+.reviewsection {
+    overflow: hidden;
+    background: #f4f5f9;
+    padding: 40px 0;
+}
+
+.reviews {
+    text-align: center;
+}
+
+.reviews img {
+    width: 191px !important;
+    margin: auto;
+}
+
+.reviews h4 {
+    font-size: 17px;
+}
+
+.reviews h3 {
+    font-size: 15px;
+}
+
+button.owl-next span,
+button.owl-prev span {
+    font-size: 44px;
+}
+
+button.owl-next {
+    position: absolute;
+    right: 0;
+    top: 36%;
+}
+
+button.owl-prev {
+    position: absolute;
+    left: 0;
+    top: 36%;
+}
+
+/* ==================our service bottom css end=================== */
+/* ==================Brathcrumb css start=================== */
+.brathcramp {
+    padding: 120px 0;
+    background-repeat: repeat-x;
+    background-position: bottom right;
+    position: relative;
+    animation: bganimation 30s ease-in-out infinite;
+}
+
+.brathcramp::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.538);
+
+}
+
+.brathcramp h2 {
+    position: relative;
+    z-index: 99;
+    font-weight: 600;
+    font-size: 57px;
+}
+
+.servicesicon {
+    position: relative;
+}
+
+.servicesicon::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 107px;
+    height: 107px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.servicesicon1::after {
+    background: url('/asset/img/explosion.gif');
+    opacity: 1;
+}
+
+.servicesicon2::after {
+    background: url('/asset/img/fire.gif');
+    opacity: 1;
+}
+
+.servicesicon3::after {
+    background: url('/asset/img/water.gif');
+    opacity: 1;
+}
+
+.servicesicon4::after {
+    background: url('/asset/img/peralux.gif');
+    opacity: 1;
+}
+.servicesicon5::after {
+    background: url('/asset/img/explosion.gif');
+    opacity: 1;
+}
+.servicesicon6::after {
+    background: url('/asset/img/fire.gif');
+    opacity: 1;
+}
+.servicesicon7::after {
+    background: url('/asset/img/water.gif');
+ 
+    opacity: 1;
+}
+.servicesicon8::after {
+    background: url('/asset/img/peralux.gif');
+    opacity: 1;
+}
+
 /* ==================Brathcrumb bottom css end=================== */
 section.brathcrumbbottom p {
     font-size: 14px;
 }
+
 .beginningcontent h2 {
-   font-weight: 600;
+    font-weight: 600;
 }
+
 .beginningcontent p {
     font-size: 14px;
 }
-.beginningimg img{
+
+.beginningimg img {
     animation: aboutanimation 5s ease-in-out infinite;
 }
-@keyframes aboutanimation {
-    0%,to{
-        transform: translate(0,-10px);
-        transition: all .5s ease-in-out;
-    }
-    65%{
-        transform: translate(0,15px);
-        transition: all .5s ease-in-out;
-    }
-   
-}
-@keyframes bganimation {
-    0%{
-       background-position: 0,0;
-        transition: all .5s ease-in-out;
-    }
-    100%,to{
-        background-position: 100%,0;
-        transition: all .5s ease-in-out;
-    }
-   
-}
+
 
 /* ==================Brathcrumb css end=================== */
+
+
+/* ==================our product css start=================== */
+.itemcontent {
+    background: #fff;
+    box-shadow: 0px 20px 20px rgb(0 0 0 / 16%);
+    margin-right: 10px;
+}
+
+.ourprotfolio {
+    margin-bottom: 65px !important;
+    animation: aboutanimation 5s ease-in-out infinite;
+}
+
+.protfolilethight {
+    height: 400px;
+    width: 50%;
+}
+
+a.itemcontent h2 {
+    font-size: 23px;
+    color: #111;
+    padding-top: 10px;
+    padding-left: 19px;
+}
+
+.itemcontent p {
+    font-size: 13px;
+    color: #111;
+    padding-top: 10px;
+    padding-left: 19px;
+}
+
+.protfoliletsmall {
+    width: 25%;
+    margin: 0 0px;
+}
+
+.protfoliletsmall:last-child {
+    margin: 0 0;
+}
+
+.marginworkminus {
+    margin-top: -184px;
+}
+
+.maginnane {
+    margin-bottom: 19px !important;
+}
+
+/* ==================our product css end=================== */
+
+/* ==================analyzer css start=================== */
+.analyeritem {
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+    position: relative;
+    overflow: hidden;
+    animation: aboutanimation 5s ease-in-out infinite;
+}
+
+.analyeritem img {
+    height: 285px;
+    width: 100%;
+}
+
+.analyzercontent h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.analyzercontent {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.analyzersocial {
+    text-align: center;
+    position: absolute;
+}
+
+.analyzersocial {
+    text-align: center;
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    transform: translate(-50%, 0px);
+    font-size: 20px;
+    width: 100%;
+    transform: translateY(44px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 81px;
+
+}
+
+.imgdesign {
+    position: absolute;
+    width: 100%;
+    bottom: 168px;
+    left: 0;
+    height: 15px;
+}
+
+.imgdesign img {
+    height: 98px;
+}
+
+.analyzersocial a {
+    color: #fff;
+    background: #787272;
+    height: 43px;
+    width: 43px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.analyeritem:hover .analyzersocial {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.ourclients img {
+    transition: all .5s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.ourclients img:hover {
+    transform: scale(1.2);
+}
+
+
+/* ==================analyzer css end=================== */
+/* ==================protfolio css start=================== */
+.banner_bottom_content h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #2a59a7;
+}
+.target_item_content{
+    margin-bottom: 50px;
+}
+.target_item_content ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+   
+    list-style: none;
+}
+.target_item_content ul li {
+    flex: 1;
+}
+.target_item_content ul li .target_item {
+    text-align: center;
+    padding: 7px;
+}
+.target_item_content ul li .target_item img {
+    width: 70px;
+    margin-bottom: 12px;
+}
+.target_item_content ul li .target_item h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.target_item_content ul li .target_item p {
+    font-size: 14px;
+}
+.tabcontantmenu{}
+.tabcontantmenu ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    list-style: none;
+    background: #ddd;
+    border-radius: 30px;
+}
+.tabcontantmenu ul li{
+    flex: 1;
+}
+.tabcontantmenu ul li a{
+   color: #111;
+   display: block;
+   position: relative;
+}
+.tabcontantmenu ul li a .tabicon{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    
+}
+.tabcontantmenu ul li a .tabicon ~ p {
+    position: absolute;
+    left: 0;
+    bottom: -42px;
+    color: #111;
+    font-size: 16px;
+}
+.tabcontantmenu ul li a .tabicon {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 28px;
+}
+.tabcontent{
+    margin-top:72px ;
+    margin-bottom:50px ;
+}
+.tabcontentitem{
+    display: flex;
+    align-items: center;
+}
+.tabcontentimg {
+    width: 403px;
+    margin-right: 22px;
+}
+.galleryvideocontent{
+    position: relative;
+}
+.galleryvideocontent img{}
+.galleryvideocontent .playicon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    color: #111;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.galleryvideocontent .playicon a{
+    
+}
+/* ==================contact us css start=================== */
+.contactleft {
+    background: #ddd url('/asset/img/contact-page-bg.png') center center no-repeat;
+    background-size: cover;
+    padding: 29px 0 29px 225px;
+}
+
+.contact_right_content p {
+    font-size: 15px;
+}
+
+.contact_right_content h3 {
+    font-size: 20px;
+}
+
+.contact_left_icon {
+    width: 24px;
+    font-size: 20px;
+}
+
+.contactleft_details {
+    display: flex;
+}
+
+.contact_left h2 {
+    font-weight: 700;
+}
+
+.submitbtn {
+    padding: 10px 41px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid rgb(9, 205, 172);
+    background: none;
+    outline: none;
+}
+
+.submitbtn:focus {
+    border: 1px solid rgb(9, 205, 172);
+    outline: none;
+}
+
+/* ==================contact us css end=================== */
 /* ==================footer bottom css start=================== */
 
-.footer-section{
-  position: relative;
+.footer-section {
+    position: relative;
 }
-.footercontent{
+
+.footercontent {
     text-align: center;
     position: absolute;
     width: 100%;
@@ -338,21 +811,27 @@ section.brathcrumbbottom p {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
 .footercontent p {
     margin: 0;
     color: #fff;
     line-height: 27px;
 }
-.footrlogo img{}
-.footermenu{}
+
+.footrlogo img {}
+
+.footermenu {}
+
 .footermenu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 .footermenu ul li {
     display: inline-block;
 }
+
 .footermenu ul li a {
     color: #fff;
     padding: 10px;
@@ -360,7 +839,8 @@ section.brathcrumbbottom p {
     margin-top: 15px;
     font-weight: 500;
 }
-.footersocialicon a {
+
+.footersocialicon a i {
     color: #fff;
     height: 40px;
     width: 40px;
@@ -369,15 +849,70 @@ section.brathcrumbbottom p {
     border-radius: 50%;
     font-size: 20px;
     margin-top: 10px;
+    text-align: center;
 }
+
+.footersocialicon a:hover .fa-facebook {
+    background: #0573e7;
+}
+
+.footersocialicon a:hover .fa-twitter {
+    background: #329dea;
+}
+
+.footersocialicon a:hover .fa-instagram {
+    background: linear-gradient(45deg, #6b38c4, #c8145e);
+
+}
+
+.footersocialicon a:hover .fa-linkedin {
+    background: #0073af;
+
+}
+
+.footersocialicon a:hover .fa-youtube {
+    background: #ff0000;
+}
+
 /* footer canves animation start */
-canvas{
+canvas {
     border: 1px solid black;
-    background-color: black; 
-  }
-  canvas.footercanvas {
+    background-color: black;
+}
+
+canvas.footercanvas {
     width: 100%;
     height: 486px;
     padding: 69px 0;
 }
+
 /* footer canves animation end */
+/* animation css */
+@keyframes aboutanimation {
+
+    0%,
+    to {
+        transform: translate(0, -10px);
+        transition: all .5s ease-in-out;
+    }
+
+    65% {
+        transform: translate(0, 15px);
+        transition: all .5s ease-in-out;
+    }
+
+}
+
+@keyframes bganimation {
+    0% {
+        background-position: 0, 0;
+        transition: all .5s ease-in-out;
+    }
+
+    100%,
+    to {
+        background-position: 100%, 0;
+        transition: all .5s ease-in-out;
+    }
+
+}

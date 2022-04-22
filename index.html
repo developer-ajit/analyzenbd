@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- custom link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link rel="stylesheet" href="./asset/css/jquery.hislide.min.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -17,7 +18,14 @@
   <title>Analyzenbd</title>
 </head>
 
-<body>
+<body onload="dispalyload()">
+  <!-- loader start -->
+  <div id="loading">
+    <div class="loaderimg">
+      <img src="./asset/img/preloader.gif" alt="">
+    </div>
+  </div>
+  <!-- loader end -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark headercontent">
       <div class="container-fluid">
@@ -30,12 +38,12 @@
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
             <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item"><a href="aboutus.html">About Us</a></li>
-            <li class="nav-item"><a href="#">Services</a></li>
-            <li class="nav-item"><a href="#">Products</a></li>
-            <li class="nav-item"><a href="#">Our Works</a></li>
-            <li class="nav-item"><a href="#">Clients</a></li>
-            <li class="nav-item"><a href="#">Analyzers</a></li>
-            <li class="nav-item"><a href="#">Contact Us</a></li>
+            <li class="nav-item"><a href="ourservices.html">Services</a></li>
+            <li class="nav-item"><a href="ourproduct.html">Products</a></li>
+            <li class="nav-item"><a href="ourwork.html">Our Works</a></li>
+            <li class="nav-item"><a href="ourclients.html">Clients</a></li>
+            <li class="nav-item"><a href="analyzers.html">Analyzers</a></li>
+            <li class="nav-item"><a href="contactus.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -46,9 +54,9 @@
     <canvas id="stars"></canvas>
     <div class="container-fluid bannerconsection">
       <div class="row justify-content-center">
-        <div class="col-lg-5">
+        <div class="col-lg-5 banneritem">
           <div class="banner-content">
-            <h4>First Ever Bangladeshi League of</h4>
+            <h4 >First Ever Bangladeshi League of</h4>
             <h1>Digital Superheroes</h1>
             <h3>For One-Stop Solution Since 2008</h3>
             <p>In the last 12 years, Analyzen evolved from a local digital-first marketing company to offering an
@@ -58,9 +66,21 @@
               solution for any brand across different media.</p>
           </div>
         </div>
-        <div class="col-lg-7">
-
-        </div>
+        <div class="col-lg-7 banneritem text-center">
+          <div class="slide hi-slide">
+            <ul>
+              <li>
+              <img src="./asset/img/image1.jpg" alt="Img 1" /></li>
+              <li><img src="./asset/img/image2.jpg" alt="Img 2" /></li>
+              <li><img src="./asset/img/image3.jpg" alt="Img 3" /></li>
+              <li><img src="./asset/img/image4.jpg" alt="Img 4" /></li>
+              <li><img src="./asset/img/image5.jpg" alt="Img 5" /></li>
+              <li><img src="./asset/img/image6.jpg" alt="Img 6" /></li>
+              <li><img src="./asset/img/image7.jpg" alt="Img 7" /></li>
+              <li><img src="./asset/img/image8.jpg" alt="Img 7" /></li>
+            </ul>
+          </div>
+       </div>
       </div>
     </div>
   </section>
@@ -75,7 +95,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -87,7 +107,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -99,7 +119,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -111,7 +131,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -123,7 +143,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -135,7 +155,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -147,7 +167,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -159,7 +179,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -171,7 +191,7 @@
               <img src="./asset/img/aarong-eid.jpg" alt="">
               <div class="overlycontent">
                 <div class="gallerylink">
-                  <a href="#"><i class="fas fa-link"></i></a>
+                  <a href="protfolio.html"><i class="fas fa-link"></i></a>
                 </div>
                 <div class="overlycontenttext">
                   <h4>Aarong Eid 2017</h4>
@@ -198,36 +218,48 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 mt-3">
-          <a href="#">
+          <a href="#" data-aos="fade-up"
+          data-aos-duration="1500">
             <div class="ourservicesitem">
-              <img src="./asset/img/strategy.svg" alt="">
+              <div class="serviceimg serviceimg1">
+                <img src="./asset/img/strategy.svg" alt="">
+              </div>
               <h3 class="strategy">Digital-first 360 Strategy</h3>
               <p>Digitization is fundamentally altering the nature of competition and in this competitive...</p>
             </div>
           </a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 mt-3">
-          <a href="#">
+          <a href="#" data-aos="fade-up"
+          data-aos-duration="2000">
             <div class="ourservicesitem">
+              <div class="serviceimg serviceimg2">
               <img src="./asset/img/content-dev.svg" alt="">
+              </div>
               <h3 class="content-dev">Cross-media Content Development</h3>
               <p>Seeing is believing. So, contents are the most important catalysts that create a strong brand...</p>
             </div>
           </a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 mt-3">
-          <a href="#">
+          <a href="#" data-aos="fade-up"
+          data-aos-duration="2500">
             <div class="ourservicesitem">
+              <div class="serviceimg serviceimg3">
               <img src="./asset/img/web-dev.svg" alt="">
+              </div>
               <h3 class="web-dev">Web Experience</h3>
               <p>Analyzen don't just design website also gives it life. We have a vast experience of creating...</p>
             </div>
           </a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 mt-3">
-          <a href="#">
+          <a href="#" data-aos="fade-up"
+          data-aos-duration="3000">
             <div class="ourservicesitem">
-              <img src="./asset/img/games.svg" alt="">
+              <div class="serviceimg serviceimg4">
+                <img src="./asset/img/games.svg" alt="">
+              </div>
               <h3 class="games">Apps & Games Development</h3>
               <p>With the meteoric rise of mobile devices, the prevalence and importance of apps and games...</p>
             </div>
@@ -235,9 +267,12 @@
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 mt-3">
-          <a href="#">
+          <a href="#" data-aos="fade-up"
+          data-aos-duration="1500">
             <div class="ourservicesitem">
-              <img src="./asset/img/online-tv.svg" alt="">
+              <div class="serviceimg serviceimg5">
+              <img src="./asset/img/online-tv.svg" alt="" >
+              </div>
               <h3 class="strategy"> Digital Buying</h3>
               <p>Analyzen is a highly capable provider of Enterprise Software Development services...</p>
             </div>
@@ -245,8 +280,11 @@
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 mt-3">
           <a href="#">
-            <div class="ourservicesitem">
+            <div class="ourservicesitem" data-aos="fade-up"
+            data-aos-duration="2000">
+            <div class="serviceimg serviceimg6">
               <img src="./asset/img/online-activation.svg" alt="">
+            </div>
               <h3 class="content-dev"> Community Management</h3>
               <p>Data is the oil of the digital economy, the more you mine the more you can fuel your brand...</p>
             </div>
@@ -254,20 +292,23 @@
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 mt-3">
           <a href="#">
-            <div class="ourservicesitem">
+            <div class="ourservicesitem" data-aos="fade-up"
+            data-aos-duration="2500">
+            <div class="serviceimg serviceimg7">
               <img src="./asset/img/enterprise-software.svg" alt="">
-
+            </div>
               <h3 class="web-dev"> Enterprise Software</h3>
               <p>In the high-touch digital environment it is imperative to satisfy audience’s query...</p>
             </div>
           </a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 mt-3">
-          <a href="#">
+          <a href="#" data-aos="fade-up"
+          data-aos-duration="3000">
             <div class="ourservicesitem">
-              <img src="./asset/img/analytics.svg" alt="">
-
-
+              <div class="serviceimg serviceimg8">
+                <img src="./asset/img/analytics.svg" alt="">
+              </div>
               <h3 class="games">Data Analytics</h3>
               <p>If you are looking for a better return on your ad spend then Analyzen is the place to go...</p>
             </div>
@@ -421,9 +462,15 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="./asset/js/jquery.hislide.js" ></script>
+  <script src="./asset/js/aos.js"></script>
   <script src="./asset/js/index.js"></script>
   <script src="./asset/js/footer.js"></script>
-
+  <script>
+    let loading = document.getElementById('loading');
+    function dispalyload() { 
+      loading.style.display = 'none';
+    }
+  </script>
 </body>
-
 </html>

@@ -121,12 +121,7 @@ $(document).ready(function () {
         }
       })
 });
-/** owl carousel end */
 
-/** header section */
-$(document).ready(function () {
-  $(window).scroll(function () { 
-   $('header').addClass('scrolactive');
-   $('.headermenu ul li a').addClass('nevmenu');
-  });
-});
+
+ AOS.init();
+ $('.slide').hiSlide();

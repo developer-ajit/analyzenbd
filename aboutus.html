@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- custom link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link rel="stylesheet" href="./asset/css/jquery.hislide.min.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -17,8 +18,15 @@
   <title>Analyzenbd</title>
 </head>
 
-<body>
-  <header>
+<body onload="dispalyload()">
+  <!-- loader start -->
+  <div id="loading">
+    <div class="loaderimg">
+      <img src="./asset/img/preloader.gif" alt="">
+    </div>
+  </div>
+  <!-- loader end -->
+  <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark headercontent">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="./asset/img/logo.svg" alt=""></a>
@@ -30,12 +38,12 @@
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
             <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item"><a href="aboutus.html">About Us</a></li>
-            <li class="nav-item"><a href="#">Services</a></li>
-            <li class="nav-item"><a href="#">Products</a></li>
-            <li class="nav-item"><a href="#">Our Works</a></li>
-            <li class="nav-item"><a href="#">Clients</a></li>
-            <li class="nav-item"><a href="#">Analyzers</a></li>
-            <li class="nav-item"><a href="#">Contact Us</a></li>
+            <li class="nav-item"><a href="ourservices.html">Services</a></li>
+            <li class="nav-item"><a href="ourproduct.html">Products</a></li>
+            <li class="nav-item"><a href="ourwork.html">Our Works</a></li>
+            <li class="nav-item"><a href="ourclients.html">Clients</a></li>
+            <li class="nav-item"><a href="analyzers.html">Analyzers</a></li>
+            <li class="nav-item"><a href="contactus.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -134,7 +142,8 @@
        </div>
     </section>
   <!-- footer section -->
-  <section class="footer-section">
+   <!-- footer section -->
+   <section class="footer-section">
     <canvas class="footercanvas"></canvas>
     <div class="container">
       <div class="row">
@@ -177,8 +186,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="./asset/js/index.js"></script>
+  <script type="text/javascript" src="./asset/js/jquery.hislide.js" ></script>
+  <script src="./asset/js/aos.js"></script>
   <script src="./asset/js/footer.js"></script>
- 
+  <script>
+    let loading = document.getElementById('loading');
+    function dispalyload() { 
+      loading.style.display = 'none';
+    }
+  </script>
 </body>
 </html>

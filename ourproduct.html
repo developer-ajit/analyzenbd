@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- custom link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link rel="stylesheet" href="./asset/css/jquery.hislide.min.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -17,8 +18,15 @@
   <title>Analyzenbd</title>
 </head>
 
-<body>
-  <header>
+<body onload="dispalyload()">
+  <!-- loader start -->
+  <div id="loading">
+    <div class="loaderimg">
+      <img src="./asset/img/preloader.gif" alt="">
+    </div>
+  </div>
+  <!-- loader end -->
+  <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark headercontent">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="./asset/img/logo.svg" alt=""></a>
@@ -30,12 +38,12 @@
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
             <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item"><a href="aboutus.html">About Us</a></li>
-            <li class="nav-item"><a href="#">Services</a></li>
-            <li class="nav-item"><a href="#">Products</a></li>
-            <li class="nav-item"><a href="#">Our Works</a></li>
-            <li class="nav-item"><a href="#">Clients</a></li>
-            <li class="nav-item"><a href="#">Analyzers</a></li>
-            <li class="nav-item"><a href="#">Contact Us</a></li>
+            <li class="nav-item"><a href="ourservices.html">Services</a></li>
+            <li class="nav-item"><a href="ourproduct.html">Products</a></li>
+            <li class="nav-item"><a href="ourwork.html">Our Works</a></li>
+            <li class="nav-item"><a href="ourclients.html">Clients</a></li>
+            <li class="nav-item"><a href="analyzers.html">Analyzers</a></li>
+            <li class="nav-item"><a href="contactus.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -46,31 +54,140 @@
        <div class="container">
          <div class="row">
            <div class="col-lg-12 text-center text-white">
-              <h2>Our Product</h2>
+              <h2>Our Products</h2>
            </div>
          </div>
        </div>
   </section>
 
     <!-- The Beginning section -->
-    <div class="ourworksection">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="ourprotfolio">
-                <div class="protfolio_item">
-                  <a href="#" class="itemcontent">
-                    <img src="./asset/img/lux-super-star.jpg" alt="">
-                  </a>
-                </div>
-              </div>
+    <section class="thebeginningsection py-5">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon">
+              <img src="./asset/img/listenyzen-logo.png" alt="">
+            </div>
+              <p>listenyzen is an omni-solution for social media customer servicing & insights mining. It's a fresh new product from Analyzen that serves your customers across any Social Media as well as track insights and trends with the help of Artificial Intelligence. This platform has all the insights combined from our experience across 10 years in the industry as well as learning from rest of the existing similar products in the market. listenyzen became the Champion in the "BASIS National ICT Awards 2019" in "Marketing Solutions" category which is considered the most prestigious award in the ICT industry of Bangladesh.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/listenyzen.png" alt="">
             </div>
           </div>
         </div>
-    </div>
+      </div>
+    </section>
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/commzen.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon">
+                <img src="./asset/img/commzen-logo.png" alt="">
+              </div>
+             
+              <p>commzen is an AI-enhanced conversational commerce platform equipped with NLP (Natural Language Processing) Technology that helps your business grow over Social & Digital Media, regardless of physical outlets or websites. It will stay awake 24/7 for your customers' beck and call. It will address the most common customer inquiries like – picking a product per their preference, check availability, provide details of the product, guide the way to the nearest outlet etc. and leave only the unique queries to you. commzen became the Champion in the "BASIS National ICT Awards 2019" in "Digital Marketing/Advertising" category which is considered the most prestigious award in the ICT industry of Bangladesh.
 
+              </p>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon ">
+              <img src="./asset/img/microzen-logo.png" alt="">
+              </div>
+              <p>AIn order to empower the micro credit industry, Analyzen has brought forth the next generation Micro credit Automation Software – microzen. Equipped with cleaner application and advanced algorithms, microzen is the first ever Decision Support System for the Micro-Finance institutions of our country inclusive of all the current and future market requirements for the industry. microzen became the Champion in the "BASIS National ICT Awards 2019" in "Finance & Accounting Solutions (Fintech)"" category which is considered the most prestigious award in the ICT industry of Bangladesh.
+
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/microzen.png" alt="">
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/merchandyzen.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon">
+                <img src="./asset/img/merchandyzen-logo.png" alt="">
+              </div>
+              <p>Step up your visual merchandising game with the merchandising solution using cutting edge technology. Plan PJP routes, ensure data authenticity via GPS anchoring and real-time image evidence on this lightweight yet versatile web platform. Enable your merchandisers with smart devices and increase your productivity manifold.
+
+              </p>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon">
+                <img src="./asset/img/activyzen-logo.png" alt="">
+              </div>
+              <p>An integrated platform for your company to organize, manage, monitor and analyze all the on-ground market activation conducted by your brand promoters hired via agencies. This platform ensures accountability of the field forces as well as helps you keep precise and clean data for deeper analysis at any point in time. Also, it comes with a dynamic android app that can be configurable for multiple campaigns conducted via multiple teams at the same time.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/activyzen.png" alt="">
+            </div>
+          </div>
+          
+        </div>
+       </div>
+    </section>
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/sellozen.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon servicesicon4">
+                <img src="./asset/img/sellozen-logo.png" alt="">
+              </div>
+              <p>sellozen makes the basic sales order capture even simpler by converting the whole process into digital via smart devices, making it even more productive, efficient, insightful and sustainable by reducing paperwork. It enhances not only the field operation, but also back-office reporting and projections boosting the strategic prowess of the overall organization.
+
+              </p>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
   <!-- footer section -->
-  <section class="footer-section">
+   <!-- footer section -->
+   <section class="footer-section">
     <canvas class="footercanvas"></canvas>
     <div class="container">
       <div class="row">
@@ -78,6 +195,7 @@
             <div class="footercontent">
                <div class="footrlogo">
                    <img src="./asset/img/footer-logo.svg" alt="">
+                  
                </div>
                <div class="footermenu">
                  <ul>
@@ -112,8 +230,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="./asset/js/index.js"></script>
   <script src="./asset/js/footer.js"></script>
+
+  <script>
+    let loading = document.getElementById('loading');
+    function dispalyload() { 
+      loading.style.display = 'none';
+    }
+  </script>
  
 </body>
 </html>

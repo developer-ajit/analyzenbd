@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- custom link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link rel="stylesheet" href="./asset/css/jquery.hislide.min.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -17,8 +18,15 @@
   <title>Analyzenbd</title>
 </head>
 
-<body>
-  <header>
+<body onload="dispalyload()">
+  <!-- loader start -->
+  <div id="loading">
+    <div class="loaderimg">
+      <img src="./asset/img/preloader.gif" alt="">
+    </div>
+  </div>
+  <!-- loader end -->
+  <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark headercontent">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="./asset/img/logo.svg" alt=""></a>
@@ -30,12 +38,12 @@
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
             <li class="nav-item"><a href="index.html">Home</a></li>
             <li class="nav-item"><a href="aboutus.html">About Us</a></li>
-            <li class="nav-item"><a href="#">Services</a></li>
-            <li class="nav-item"><a href="#">Products</a></li>
-            <li class="nav-item"><a href="#">Our Works</a></li>
-            <li class="nav-item"><a href="#">Clients</a></li>
-            <li class="nav-item"><a href="#">Analyzers</a></li>
-            <li class="nav-item"><a href="#">Contact Us</a></li>
+            <li class="nav-item"><a href="ourservices.html">Services</a></li>
+            <li class="nav-item"><a href="ourproduct.html">Products</a></li>
+            <li class="nav-item"><a href="ourwork.html">Our Works</a></li>
+            <li class="nav-item"><a href="ourclients.html">Clients</a></li>
+            <li class="nav-item"><a href="analyzers.html">Analyzers</a></li>
+            <li class="nav-item"><a href="contactus.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -61,8 +69,10 @@
               <div class="servicesicon servicesicon1">
               <img src="./asset/img/strategy.svg" alt="">
             </div>
-              <h2>Data Analytics</h2>
-              <p>Data is the oil of the digital economy, the more you mine the more you can fuel your brand. With enormous amount of user data developed from your brand’s presence in online and offliine, we can turn them into actionable insights. With proper analytics and reporting generated from Analyzen team you can get an in depth understanding of how your brand is faring as well as reaching the perfect audience who feel more affinity to your brand.</p>
+              <h2>Digital-first 360 Strategy</h2>
+              <p>Digitalization is fundamentally altering the nature of competition and in this competitive market having a winning digital-first strategy is an absolute necessity. Analyzen’s superior team is capable of devising brand and omni-channel (television, strategies keeping digital at the center with precision and dexterity. From acquiring insight, generating ideas, making appropriate plans and ensuring feasibility for execution the team ensures to deliver a proper strategic fit for the clients.
+
+                The team is capable of planning your brand's digital-first 360 Strategy to create a strong presence in all mediums therefore building a strong connection with your customers or potential customers.</p>
             </div>
           </div>
           <div class="col-lg-6">
@@ -86,9 +96,11 @@
               <div class="servicesicon servicesicon2">
                 <img src="./asset/img/analytics.svg" alt="">
               </div>
-              <h2>Cross-media Content Development</h2>
-              <p>Seeing is believing. So, contents are the most important catalysts that create a strong brand presence. <br><br>
-                Analyzen, from day one, is well known for its content designs. Our content creators are not only creative, but also very agile and they can make impossible things possible. With the rise of dynamic contents, zero second videos and platform specific adaptations, our content creators are adaptable and always ready to deliver for any media you can think of.</p>
+              <h2>Data Analytics</h2>
+              <p>Seeing is believing. So, contents are the most important catalysts that create a strong brand presence.
+
+                Analyzen, from day one, is well known for its content designs. Our content creators are not only creative, but also very agile and they can make impossible things possible. With the rise of dynamic contents, zero second videos and platform specific adaptations, our content creators are adaptable and always ready to deliver for any media you can think of.
+              </p>
             </div>
           </div>
         </div>
@@ -102,8 +114,12 @@
               <div class="servicesicon servicesicon3">
               <img src="./asset/img/content-dev.svg" alt="">
               </div>
-              <h2>Web Experience</h2>
-              <p>Analyzen don't just design website also gives it life. We have a vast experience of creating interactive ideas & implementing them in website form. We believe a website is where you can create your brand equity. Also, with the rise of mobile traffic to web platforms we have mastered the art of mobile device optimization and as a result enhancing the user experience.</p>
+              <h2>Cross-media Content Development</h2>
+              <p>Seeing is believing. So, contents are the most important catalysts that create a strong brand presence.
+
+                Analyzen, from day one, is well known for its content designs. Our content creators are not only creative, but also very agile and they can make impossible things possible. With the rise of dynamic contents, zero second videos and platform specific adaptations, our content creators are adaptable and always ready to deliver for any media you can think of.
+                
+                </p>
             </div>
           </div>
           <div class="col-lg-6">
@@ -127,15 +143,98 @@
               <div class="servicesicon servicesicon4">
                 <img src="./asset/img/web-dev.svg" alt="">
               </div>
-              <h2>Digital Buying</h2>
-              <p>If you are looking for a better return on your ad spend then Analyzen is the place to go. Analyzen’s team of expert buying professionals ensure creating a spot-on media buying strategy, putting it into execution and finally achieving cost optimization for better ad performance and ROI for your brands.</p>
+              <h2>Web Experience</h2>
+              <p>Analyzen don't just design website also gives it life. We have a vast experience of creating interactive ideas & implementing them in website form. We believe a website is where you can create your brand equity. Also, with the rise of mobile traffic to web platforms we have mastered the art of mobile device optimization and as a result enhancing the user experience.</p>
             </div>
           </div>
         </div>
        </div>
     </section>
-  <!-- footer section -->
-  <section class="footer-section">
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon servicesicon5">
+                <img src="./asset/img/online-tv.svg" alt="">
+              </div>
+              <h2>Digital Buying</h2>
+              <p>If you are looking for a better return on your ad spend then Analyzen is the place to go. Analyzen’s team of expert buying professionals ensure creating a spot-on media buying strategy, putting it into execution and finally achieving cost optimization for better ad performance and ROI for your brands.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/our-values.jpg" alt="">
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/our-values.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon servicesicon6">
+                <img src="./asset/img/online-activation.svg" alt="">
+              </div>
+              <h2>Community Management</h2>
+              <p>In the high-touch digital environment it is imperative to satisfy audience’s query and respond quickly. Analyzen’s community management team works round the clock to address audience queries for your brand and deliver proper reporting which helps you to understand your audiences better.</p>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon servicesicon7">
+                <img src="./asset/img/games.svg" alt="">
+              </div>
+              <h2>Apps & Games Development</h2>
+              <p>With the meteoric rise of mobile devices, the prevalence and importance of apps and games are also on the rise.
+
+                Analyzen Technical Team is one of the most reliable and technically efficient Apps & Games developers in all of South Asia. In the last 7 years, we have successfully created over 1,000+ apps & games.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/our-values.jpg" alt="">
+            </div>
+          </div>
+         
+        </div>
+       </div>
+    </section>
+    <section class="mt-5 py-5">
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="beginningimg">
+              <img src="./asset/img/our-values.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="beginningcontent">
+              <div class="servicesicon servicesicon8">
+                <img src="./asset/img/enterprise-software.svg" alt="">
+              </div>
+              <h2>Enterprise Software</h2>
+              <p>Analyzen is a highly capable provider of Enterprise Software Development services that include specifications, database design with software component, and service-oriented architecture.</p>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
+   <!-- footer section -->
+   <section class="footer-section">
     <canvas class="footercanvas"></canvas>
     <div class="container">
       <div class="row">
@@ -143,6 +242,7 @@
             <div class="footercontent">
                <div class="footrlogo">
                    <img src="./asset/img/footer-logo.svg" alt="">
+                  
                </div>
                <div class="footermenu">
                  <ul>
@@ -177,8 +277,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="./asset/js/index.js"></script>
+  <script src="./asset/js/aos.js"></script>
   <script src="./asset/js/footer.js"></script>
- 
+  <script>
+    let loading = document.getElementById('loading');
+    function dispalyload() { 
+      loading.style.display = 'none';
+    }
+  </script>
 </body>
 </html>

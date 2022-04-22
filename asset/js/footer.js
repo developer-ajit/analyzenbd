@@ -25,7 +25,6 @@ var mouse = {
 window.addEventListener('mousemove', function(event){
   mouse.x = event.x;
   mouse.y = event.y;
-  console.log(mouse);
 });
 
 window.addEventListener('resize', function(){
@@ -94,3 +93,17 @@ function animate(){
 
 animate();
 init();
+// animation
+
+/** header section */
+$(document).ready(function () {
+  $(window).scroll(function () { 
+    if (window.scrollY > 0) {
+      $('header').addClass('scrolactive');
+      $('.headermenu ul li a').addClass('nevmenu');
+    }else{
+      $('header').removeClass('scrolactive');
+      $('.headermenu ul li a').removeClass('nevmenu');
+    }
+  });
+});
